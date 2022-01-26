@@ -1,0 +1,11 @@
+@mixin desktop {
+  @media (max-width: $desktop-width) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: $tablet-width) {
+    @content;
+  }
+}
