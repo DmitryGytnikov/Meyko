@@ -1,32 +1,54 @@
-// @font-face {
-//   font-family: "TT Norms";
-//   font-style: normal;
-//   font-weight: 500;
-//   font-display: swap;
-//   src: local("TT Norms Medium"),
-//     local("TT-Norms-Medium"),
-//     url("../fonts/TTNorms-Medium.woff2") format("woff2"),
-//     url("../fonts/TTNorms-Medium.woff") format("woff");
-// }
+@font-face {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local("Gilroy Bold"),
+    local("Gilroy-Bold"),
+    url("../fonts/Gilroy-Bold.woff2") format("woff2"),
+    url("../fonts/Gilroy-Bold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: local("Gilroy Semibold"),
+    local("Gilroy-Semibold"),
+    url("../fonts/Gilroy-Semibold.woff2") format("woff2"),
+    url("../fonts/Gilroy-Semibold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: local("Gilroy Medium"),
+    local("Gilroy-Medium"),
+    url("../fonts/Gilroy-Medium.woff2") format("woff2"),
+    url("../fonts/Gilroy-Medium.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local("Gilroy Regular"),
+    local("Gilroy-Regular"),
+    url("../fonts/Gilroy-Regular.woff2") format("woff2"),
+    url("../fonts/Gilroy-Regular.woff") format("woff");
+}
 
 // @font-face {
-//   font-family: "TT Norms";
+//   font-family: "Inter";
 //   font-style: normal;
-//   font-weight: 700;
+//   font-weight: 400;
 //   font-display: swap;
-//   src: local("TT Norms Bold"),
-//     local("TT-Norms-Bold"),
-//     url("../fonts/TTNorms-Bold.woff2") format("woff2"),
-//     url("../fonts/TTNorms-Bold.woff") format("woff");
-// }
-
-// @font-face {
-//   font-family: "TT Norms";
-//   font-style: normal;
-//   font-weight: 800;
-//   font-display: swap;
-//   src: local("TT Norms Extra Bold"),
-//     local("TT-Norms-Extra-Bold"),
-//     url("../fonts/TTNorms-ExtraBold.woff2") format("woff2"),
-//     url("../fonts/TTNorms-ExtraBold.woff") format("woff");
+//   src: local("Inter Regular"),
+//     local("Inter-Regular"),
+//     url("../fonts/Inter-Regular.woff2") format("woff2"),
+//     url("../fonts/Inter-Regular.woff") format("woff");
 // }
