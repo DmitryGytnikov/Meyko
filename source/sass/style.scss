@@ -55,25 +55,29 @@ ul {
 }
 
 // html, body
-.page {
+.page-html {
   height: 100%;
 }
 
-.page__body {
+.page {
   font-family: "Gilroy", "Arial", sans-serif;
   // font-family: "Inter", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
   color: #000000;
 
+  font-size: 18px;
+  line-height: 30px;
+
   background-color: #ffffff;
 
   min-width: 320px; // появляется нижняя прокрутка
 
+  // Липкий подвал не делал
   height: 100%;
-  display: grid;
-  grid-template-rows: min-content 1fr min-content;
-  align-content: start;
+  // display: grid;
+  // grid-template-rows: min-content 1fr min-content;
+  // align-content: start;
 
   // @media (max-width: 760px) {
   //   // overflow: hidden; //Запрет скролла при открытом меню
@@ -82,23 +86,33 @@ ul {
 }
 
 // container
-.container {
-  max-width: 1440px;
-  margin: 0 auto;
-  padding: 0 20px;
+// .container {
+//   max-width: 1440px;
+//   margin: 0 auto;
+//   padding: 0 20px;
 
-  // @include tablet {
-  //   padding: 0 10px;
-  // }
+//   // @include tablet {
+//   //   padding: 0 10px;
+//   // }
 
-  @media (max-width: 660px) {
-    padding: 0 10px;
-  }
+//   @media (max-width: 660px) {
+//     padding: 0 10px;
+//   }
+// }
+
+
+// Исправление файлов Насти
+.aside-wr {
+  left: auto;
 }
 
+.aside_menu_top ul li:nth-child(5) {
+  margin-bottom: 37px;
+}
 
-// header
-// header^^^
+.aside_logo img {
+  width: 155px;
+  height: 49px;
+}
 
-
-
+// Исправление файлов Насти^^^
