@@ -98,3 +98,33 @@
 //     $.fancybox.close();
 //   }
 // });
+
+
+$(function () {
+  // $('.faq__accordion-item').click(function(e) {
+
+  //   if($('.faq-accordion').hasClass('accordion--one')) {
+  //     $('.faq__accordion-item').not($(this)).removeClass('accordion--active');
+  //     $('.faq__accordion-text').not($(this).next()).slideUp(300);
+  //   }
+
+  //   $(this).toggleClass('accordion--active').next().slideToggle(300);
+
+  // });
+
+  $('.menu-accordion__item').click(function(e) {
+    $(this).toggleClass('accordion--active').next().slideToggle(300);
+  });
+
+  $('.aside_menu-accordion').click(function(e) {
+    $(this).toggleClass('accordion--active').next().slideToggle(300);
+  });
+
+  // $('.header-mob_menu-icon').click(function () {
+  //   $('.menu-mobile').toggleClass('active');
+  // });
+});
+
+// .menu-accordion {}
+// .menu-accordion__item {}
+// .menu-accordion__content {}
