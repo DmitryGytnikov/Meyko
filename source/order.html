@@ -5,6 +5,8 @@
   <meta name="viewport"
     content="width=device-width,initial-scale=1.0">
   <title>МЭЙКО</title>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=0753f124-1437-4020-a9a9-3f6a4a093b10&lang=ru_RU"></script>
   <link rel="stylesheet" href="css/style-N.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="preload" href="fonts/Gilroy-Bold.woff2" as="font" crossorigin>
@@ -250,126 +252,246 @@
                                 <a href="#"><span>Главная</span></a>
                             </li>
                             <li class="breadcrumbs__list-item">
-                                <a href="#"><span>Покупателям</span></a>
+                                <a href="#"><span>Корзина</span></a>
                             </li>
                             <li class="breadcrumbs__list-item">
-                                <a><span>Оптовым партнерам</span></a>
+                                <a><span>Оформление заказа</span></a>
                             </li>
                         </ul>
                     </div>
                 </div>
 
-                <div class="container">
 
-                      <section class="wholesale-partners">
-                          <h3 class="about__title">Оптовым партнерам</h3>
+                <section class="order">
+                    <div class="container">
+                        <h3 class="contacts__title">Оформление заказа</h3>
 
-                          <div class="about__banner" style="background-image: url('img/content/banner-2.jpg');">
-                              <p>
-                                  Безупречное выполнение гарантийных обязательств и оперативное послегарантийное обслуживание обеспечивают доверие тысячи покупателей.
-                              </p>
-                              <ul class="about-menu">
-                                  <li class="about-menu__item">
-                                    <a class="about-menu__link about-menu__link--active">Оптовым партнерам</a>
-                                  </li>
-                                  <li class="about-menu__item">
-                                    <a class="about-menu__link" href="#">Поставщикам материалов</a>
-                                  </li>
-                                  <li class="about-menu__item">
-                                    <a class="about-menu__link" href="#">Поставщикам мебели</a>
-                                  </li>
-                                  <li class="about-menu__item">
-                                    <a class="about-menu__link" href="#">Поставщикам оборудования</a>
-                                  </li>
-                              </ul>
-                          </div>
-                          <div class="text-wr">
-                              <p>
-                                  Компания «Мэйко» более 22 лет работает на отечественном мебельном рынке. «Мэйко» постоянно проводит обновления производства и вводит в ассортимент новые модели.
-                              </p>
+                        <div class="order__inner">
+                            <div class="feedback__form">
+                                <form class="form-feedback" aria-label="Форма для обратной связи" method="post">
 
-                              <b>
-                                  Продукция компании «Мэйко» — это:
-                              </b>
-                              <ul>
-                                  <li>
-                                      более 250 наименований корпусной мебели с оптимальным соотношением цены и качества продукции;
-                                  </li>
-                                  <li>
-                                      около 10 новых моделей в год, постоянная оптимизация ассортимента;
-                                  </li>
-                                  <li>
-                                      функциональность и стилистическое разнообразие моделей;
-                                  </li>
-                                  <li>
-                                      современные оригинальные технологии — «Мэйко» постоянно модернизирует и автоматизирует свое производство, внедряет новейшие автоматические линии;
-                                  </li>
-                                  <li>
-                                      вся линейка мебели и используемые материалы имеют гигиенические сертификаты.
-                                  </li>
-                              </ul>
+                                    <div class="form-radio">
+                                      <p class="form-radio__title">
+                                        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                          <path d="M27.1892 21.4033C24.687 21.4033 22.6514 23.4389 22.6514 25.9411C22.6514 28.4434 24.687 30.479 27.1892 30.479C29.6918 30.479 31.727 28.4434 31.727 25.9411C31.727 23.4389 29.6914 21.4033 27.1892 21.4033ZM27.1892 28.2101C25.9379 28.2101 24.9203 27.1924 24.9203 25.9411C24.9203 24.6899 25.9379 23.6722 27.1892 23.6722C28.4405 23.6722 29.4581 24.6899 29.4581 25.9411C29.4581 27.1925 28.4405 28.2101 27.1892 28.2101Z" fill="#FFD300"/>
+                                          <path d="M11.6843 21.4033C9.1821 21.4033 7.14648 23.4389 7.14648 25.9411C7.14648 28.4434 9.1821 30.479 11.6843 30.479C14.1865 30.479 16.2221 28.4434 16.2221 25.9411C16.2221 23.4389 14.1865 21.4033 11.6843 21.4033ZM11.6843 28.2101C10.433 28.2101 9.4154 27.1924 9.4154 25.9411C9.4154 24.6899 10.433 23.6722 11.6843 23.6722C12.9352 23.6722 13.9532 24.6899 13.9532 25.9411C13.9532 27.1925 12.9356 28.2101 11.6843 28.2101Z" fill="#FFD300"/>
+                                          <path d="M30.2445 8.41464C30.0516 8.03158 29.6595 7.78992 29.2307 7.78992H23.2559V10.0588H28.5311L31.6202 16.203L33.6478 15.1835L30.2445 8.41464Z" fill="#FFD300"/>
+                                          <path d="M23.7852 24.8446H15.2012V27.1135H23.7852V24.8446Z" fill="#FFD300"/>
+                                          <path d="M8.28101 24.8446H4.34829C3.72166 24.8446 3.21387 25.3525 3.21387 25.979C3.21387 26.6057 3.72173 27.1135 4.34829 27.1135H8.28108C8.9077 27.1135 9.4155 26.6056 9.4155 25.979C9.4155 25.3524 8.90763 24.8446 8.28101 24.8446Z" fill="#FFD300"/>
+                                          <path d="M35.7613 17.9092L33.5299 15.0353C33.3155 14.7584 32.9846 14.5966 32.634 14.5966H24.3903V6.65542C24.3903 6.02879 23.8824 5.521 23.2559 5.521H4.34829C3.72166 5.521 3.21387 6.02886 3.21387 6.65542C3.21387 7.28197 3.72173 7.78984 4.34829 7.78984H22.1214V15.731C22.1214 16.3576 22.6293 16.8654 23.2558 16.8654H32.0785L33.7306 18.9936V24.8444H30.5919C29.9653 24.8444 29.4575 25.3523 29.4575 25.9788C29.4575 26.6055 29.9654 27.1133 30.5919 27.1133H34.865C35.4917 27.1133 35.9995 26.6054 35.9995 25.9788V18.605C35.9995 18.3532 35.9156 18.1081 35.7613 17.9092Z" fill="#FFD300"/>
+                                          <path d="M8.20646 19.0967H2.98794C2.36131 19.0967 1.85352 19.6045 1.85352 20.2311C1.85352 20.8577 2.36138 21.3655 2.98794 21.3655H8.20639C8.83302 21.3655 9.34081 20.8577 9.34081 20.2311C9.34089 19.6045 8.83302 19.0967 8.20646 19.0967Z" fill="#FFD300"/>
+                                          <path d="M10.8151 14.6344H1.13442C0.507867 14.6344 0 15.1423 0 15.7689C0 16.3955 0.507867 16.9033 1.13442 16.9033H10.8151C11.4417 16.9033 11.9495 16.3954 11.9495 15.7689C11.9495 15.1423 11.4417 14.6344 10.8151 14.6344Z" fill="#FFD300"/>
+                                          <path d="M12.6686 10.1722H2.98794C2.36131 10.1722 1.85352 10.6801 1.85352 11.3067C1.85352 11.9333 2.36138 12.4411 2.98794 12.4411H12.6686C13.2953 12.4411 13.8031 11.9332 13.8031 11.3067C13.8031 10.6801 13.2953 10.1722 12.6686 10.1722Z" fill="#FFD300"/>
+                                        </svg>
+                                        Способ доставки
+                                      </p>
+                                      <div class="form-radio__group">
+                                        <label class="option-group__item" aria-label="Доставка">
+                                          <input class="option-group__input visually-hidden" aria-label="Доставка" type="radio" name="delivery_method" value="delivery" checked>
+                                          <span class="option-group__element"></span>
+                                          <span class="option-group__label">Доставка</span>
+                                        </label>
+                                        <label class="option-group__item" aria-label="Самовывоз">
+                                          <input class="option-group__input visually-hidden" aria-label="Самовывоз" type="radio" name="delivery_method" value="self-delivery">
+                                          <span class="option-group__element"></span>
+                                          <span class="option-group__label">Самовывоз</span>
+                                        </label>
+                                      </div>
+                                    </div>
+                                    <div class="form-radio">
+                                      <p class="form-radio__title">
+                                        <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                          <g clip-path="url(#clip0_923_704)">
+                                          <path d="M23.7304 15.0589C21.7919 15.0589 20.2148 16.636 20.2148 18.5745C20.2148 20.513 21.7919 22.0902 23.7304 22.0902H28.7109C28.7307 22.0902 28.7501 22.0882 28.7698 22.0872C28.7892 22.0881 28.8084 22.0901 28.8281 22.0901C29.4753 22.0901 29.9999 21.5654 29.9999 20.9182V11.719C29.9999 10.1589 29.2331 8.77521 28.0573 7.92273L24.0706 1.38251C23.908 1.11579 23.6457 0.925011 23.3418 0.85259C23.038 0.780051 22.7178 0.831906 22.4523 0.996554L19.5123 2.81975L18.1864 0.575969C18.027 0.306204 17.7662 0.111556 17.4623 0.0353841C17.1584 -0.0407877 16.8366 0.00802084 16.5689 0.170677L5.27981 7.03152H3.51562C2.87923 7.03152 2.35968 6.52164 2.3441 5.88895C2.35968 5.25625 2.87923 4.74637 3.51562 4.74637H5.68358C6.33081 4.74637 6.85546 4.22172 6.85546 3.5745C6.85546 2.92727 6.33081 2.40263 5.68358 2.40263H3.51562C1.85754 2.40263 0.464003 3.55657 0.0955076 5.1035C0.0342187 5.24565 0 5.40209 0 5.56668V5.85965V5.91824V25.3127C0 27.8974 2.10281 30.0002 4.68749 30.0002H25.3125C27.3333 30.0002 29.1206 28.7129 29.7598 26.7969C29.9646 26.1829 29.6329 25.5192 29.019 25.3144C28.4051 25.1096 27.7413 25.4412 27.5365 26.0552C27.217 27.013 26.3232 27.6565 25.3125 27.6565H4.68749C3.39515 27.6565 2.34375 26.6051 2.34375 25.3127V9.17424C2.71048 9.30431 3.10488 9.37527 3.51562 9.37527H25.3125C26.6048 9.37527 27.6562 10.4267 27.6562 11.719V15.0589H23.7304ZM27.6562 19.7463H23.7304C23.0843 19.7464 22.5585 19.2207 22.5585 18.5745C22.5585 17.9283 23.0843 17.4026 23.7304 17.4026H27.6562V19.7463ZM9.79264 7.03158L16.7723 2.78981L18.0201 4.90159C18.0441 4.9593 18.0716 5.0162 18.1056 5.07104C18.1311 5.11211 18.1593 5.15038 18.1888 5.18717L19.2787 7.03158H9.79264ZM22.001 7.03152L20.7049 4.83801L22.6839 3.61077L24.7692 7.03152H22.001Z" fill="#FFD300"/>
+                                          </g>
+                                          <defs>
+                                          <clipPath id="clip0_923_704">
+                                          <rect width="30" height="30" fill="white"/>
+                                          </clipPath>
+                                          </defs>
+                                        </svg>
+                                        Способ оплаты
+                                      </p>
+                                      <div class="form-radio__group">
+                                        <label class="option-group__item" aria-label="Банковская карта">
+                                          <input class="option-group__input visually-hidden" aria-label="Банковская карта" type="radio" name="payment_method" value="bankcard" checked>
+                                          <span class="option-group__element"></span>
+                                          <span class="option-group__label">Банковская карта</span>
+                                        </label>
+                                        <label class="option-group__item" aria-label="Наличные сотруднику службы доставки">
+                                          <input class="option-group__input visually-hidden" aria-label="Наличные сотруднику службы доставки" type="radio" name="payment_method" value="cash">
+                                          <span class="option-group__element"></span>
+                                          <span class="option-group__label">Наличные сотруднику службы доставки</span>
+                                        </label>
+                                      </div>
+                                    </div>
 
-                              <b>
-                                  Своим партнерам компания предлагает:
-                              </b>
-                              <ul>
-                                  <li>
-                                      широкую складскую программу;
-                                  <li>
-                                      организацию доставки товара в регионы;
-                                  </li>
-                                  <li>
-                                      доступные цены на продукцию;
-                                  </li>
-                                  <li>
-                                      индивидуальные скидки;
-                                  </li>
-                                  <li>
-                                      широкую информационную поддержку;
-                                  </li>
-                                  <li>
-                                      бесплатное снабжение рекламной продукцией;
-                                  </li>
-                                  <li>
-                                      участие в распродажах от производителя;
-                                  </li>
-                                  <li>
-                                      оптовую продажу.
-                                  </li>
-                              </ul>
-                          </div>
+                                    <input class="text-input" aria-label="Фамилия, имя, отчество" type="text" name="name" placeholder="ФИО" required>
+                                    <input class="text-input" aria-label="Номер телефона" type="tel" name="telephone-number" placeholder="Телефон" required>
+                                    <input class="text-input" aria-label="Адрес почты" type="email" name="email" placeholder="E-mail" required>
+                                    <input class="text-input" aria-label="Адрес доставки" type="text" name="address-of-delivery" placeholder="Адрес доставки">
+                                    <label class="form-feedback__checkbox-box checkbox-box">
+                                        <input class="checkbox-box__input visually-hidden" aria-label="Я даю согласие на обработку своих персональных данных" type="checkbox" name="agree-with-processing" checked>
+                                        <span class="checkbox-box__picture"></span>
+                                        <span class="checkbox-box__label">
+                                            Я даю согласие на
+                                            <a class="checkbox-box__link" href="#" target="_blank">
+                                                обработку своих <br> персональных данных
+                                            </a>
+                                        </span>
+                                    </label>
+                                    <button class="form-feedback__submit-btn" type="submit">Отправить</button>
+                                </form>
+                            </div>
 
-                          <div class="feedback__form">
-                              <h4 class="feedback__form-title">Анкета потенциального партнера</h4>
-                              <form class="form-feedback" aria-label="Форма для обратной связи" method="post">
+                            <div class="order__total">
+                                <div class="order__total-box">
+                                    <p>Ваш заказ</p>
+                                    <a href="#">Изменить</a>
+                                </div>
+                                <div class="order__total-inner">
+                                    <p>Товаров на:</p>
+                                    <div>
+                                        <span class="order__total-all">23 950</span>
+                                        руб.
+                                    </div>
+                                    <p>Общий вес:</p>
+                                    <div>
+                                        <span class="order__total-weight">200.86</span>
+                                        кг
+                                    </div>
+                                    <p>НДС (20%, включен в цену):</p>
+                                    <div>
+                                        <span class="order__total-VAT">473.67</span>
+                                        руб.
+                                    </div>
+                                    <p>Доставка:</p>
+                                    <span class="order__total-tariff">По тарифу</span>
+                                    <p>Итого:</p>
+                                    <div>
+                                        <span class="order__total-full">23 950</span>
+                                        ₽
+                                    </div>
+                                </div>
+                            </div>
 
-                                  <input class="text-input" aria-label="Фамилия, имя, отчество" type="text" name="name" placeholder="ФИО" required>
-                                  <input class="text-input" aria-label="Номер телефона" type="tel" name="telephone-number" placeholder="Телефон" required>
-                                  <input class="text-input" aria-label="Адрес почты" type="email" name="email" placeholder="E-mail" required>
-                                  <input class="text-input" aria-label="Адрес" type="text" name="address" placeholder="Адрес">
-                                  <input class="text-input" aria-label="Род деятельности" type="text" name="occupation" placeholder="Род деятельности">
-                                  <textarea class="claim-textarea" aria-label="Комментарий" name="comment" rows="5" cols="20" placeholder="Комментарий"></textarea>
+                        </div>
 
-                                  <div class="form-feedback__inner">
-                                      <button class="form-feedback__submit-btn" type="submit">Отправить</button>
-                                      <label class="form-feedback__checkbox-box checkbox-box">
-                                          <input class="checkbox-box__input visually-hidden" aria-label="Я даю согласие на обработку своих персональных данных" type="checkbox" name="agree-with-processing" checked>
-                                          <span class="checkbox-box__picture"></span>
-                                          <span class="checkbox-box__label">
-                                              Я даю согласие на
-                                              <a class="checkbox-box__link" href="#" target="_blank">
-                                                  обработку своих <br> персональных данных
-                                              </a>
-                                          </span>
-                                      </label>
-                                  </div>
+                        <div class="explanation">
+                          <p>Фото</p>
+                          <p>Наименование</p>
+                          <p>Скидка</p>
+                          <p>Цена</p>
+                          <p>Количество</p>
+                          <p>Стоимость</p>
+                        </div>
 
-                              </form>
-                          </div>
+                        <ul class="basket__list">
+                          <li class="basket__item">
+                            <div class="basket__img">
+                              <img src="img/content/basket-product-1.png" alt="Товар">
+                            </div>
+                            <div>
+                              <p class="basket__size">140 х 50 х 320</p>
+                              <p class="basket__name">Стеллаж C5</p>
+                              <p class="basket__description">стеллаж для хранения</p>
+                            </div>
+                            <p class="basket__discount">40%</p>
+                            <div>
+                              <p class="basket__price">3 950 ₽</p>
+                              <p class="basket__price-old">6 590 ₽</p>
+                            </div>
+                            <p class="basket__number">
+                              <span>5</span>
+                              штук
+                            </p>
+                            <p class="basket__sum">19 750 ₽</p>
+                          </li>
+                          <li class="basket__item">
+                            <div class="basket__img">
+                              <img src="img/content/basket-product-1.png" alt="Товар">
+                            </div>
+                            <div>
+                              <p class="basket__size">140 х 50 х 320</p>
+                              <p class="basket__name">Стеллаж C5</p>
+                              <p class="basket__description">стеллаж для хранения</p>
+                            </div>
+                            <p class="basket__discount">40%</p>
+                            <div>
+                              <p class="basket__price">3 950 ₽</p>
+                              <p class="basket__price-old">6 590 ₽</p>
+                            </div>
+                            <p class="basket__number">
+                              <span>5</span>
+                              штук
+                            </p>
+                            <p class="basket__sum">19 750 ₽</p>
+                          </li>
+                          <li class="basket__item">
+                            <div class="basket__img">
+                              <img src="img/content/basket-product-1.png" alt="Товар">
+                            </div>
+                            <div>
+                              <p class="basket__size">140 х 50 х 320</p>
+                              <p class="basket__name">Стеллаж C5</p>
+                              <p class="basket__description">стеллаж для хранения</p>
+                            </div>
+                            <p class="basket__discount">40%</p>
+                            <div>
+                              <p class="basket__price">3 950 ₽</p>
+                              <p class="basket__price-old">6 590 ₽</p>
+                            </div>
+                            <p class="basket__number">
+                              <span>5</span>
+                              штук
+                            </p>
+                            <p class="basket__sum">19 750 ₽</p>
+                          </li>
+                          <li class="basket__item">
+                            <div class="basket__img">
+                              <img src="img/content/basket-product-1.png" alt="Товар">
+                            </div>
+                            <div>
+                              <p class="basket__size">140 х 50 х 320</p>
+                              <p class="basket__name">Стеллаж C5</p>
+                              <p class="basket__description">стеллаж для хранения</p>
+                            </div>
+                            <p class="basket__discount">40%</p>
+                            <div>
+                              <p class="basket__price">3 950 ₽</p>
+                              <p class="basket__price-old">6 590 ₽</p>
+                            </div>
+                            <p class="basket__number">
+                              <span>5</span>
+                              штук
+                            </p>
+                            <p class="basket__sum">19 750 ₽</p>
+                          </li>
+                          <li class="basket__item">
+                            <div class="basket__img">
+                              <img src="img/content/basket-product-1.png" alt="Товар">
+                            </div>
+                            <div>
+                              <p class="basket__size">140 х 50 х 320</p>
+                              <p class="basket__name">Стеллаж C5</p>
+                              <p class="basket__description">стеллаж для хранения</p>
+                            </div>
+                            <p class="basket__discount">40%</p>
+                            <div>
+                              <p class="basket__price">3 950 ₽</p>
+                              <p class="basket__price-old">6 590 ₽</p>
+                            </div>
+                            <p class="basket__number">
+                              <span>5</span>
+                              штук
+                            </p>
+                            <p class="basket__sum">19 750 ₽</p>
+                          </li>
+                        </ul>
 
-                      </section>
+                    </div>
+                </section>
 
-                </div>
 
             </main>
 
