@@ -33,6 +33,11 @@ $(function () {
     $('.search__sort-current').text(text_search);
   });
 
+  // Кнопка "В ИЗБРАННОЕ" на card.html
+  $('.info__favorites').click(function(e) {
+    $(this).toggleClass('info__favorites--active');
+  });
+
 
   // jQuery-плагин для установки курсора в определенной позиции pos (для mask):
   $.fn.setCursorPosition = function(pos) {
