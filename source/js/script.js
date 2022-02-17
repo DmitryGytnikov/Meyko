@@ -38,6 +38,22 @@ $(function () {
     $(this).toggleClass('info__favorites--active');
   });
 
+  // Кнопка "В ИЗБРАННОЕ" на карточке товара на main.html, card.html, catalog.html
+  $('.product-card_fav').click(function(e) {
+    $(this).toggleClass('product-card_fav--active');
+  });
+
+  // Табы ("Характеристики") на card.html
+  $('.tab-1').click(function(e) {
+    e.preventDefault();
+    $($(this).closest('.card__tab').find('li').find('.tab-1')).removeClass('tab--active-1');
+    // $($(this).closest('.tabs-wrapper-1').find('li').find('a')).removeClass('tab--active-1');
+    $($(this).closest('.card__tab').find('.merchandise__content-wr').find('ul')).removeClass('tabs-content--active-1');
+
+    $(this).addClass('tab--active-1');
+    $($(this).attr('href')).addClass('tabs-content--active-1');
+  });
+
 
   // jQuery-плагин для установки курсора в определенной позиции pos (для mask):
   $.fn.setCursorPosition = function(pos) {
