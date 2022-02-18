@@ -1248,6 +1248,10 @@ section {
   @include mobile {
     width: 100%;
     margin-top: 1px;
+
+    &:focus-visible {
+      outline: none;
+    }
   }
 }
 
@@ -5036,6 +5040,13 @@ p.form-free_desc {
 .slick-track {
   display: flex;
   justify-content: space-between;
+  align-items: stretch;
+}
+
+.main-hits_content .slick-slide {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .product-card {
@@ -5045,6 +5056,7 @@ p.form-free_desc {
   position: relative;
   width: 236px !important;
   min-height: 375px !important;
+  border: none;
 }
 
 .product-card a {
@@ -5052,6 +5064,19 @@ p.form-free_desc {
   width: 236px;
   min-height: 375px !important;
   padding: 0 16px 17px 16px;
+  border: 1px solid #ededed;
+  position: relative;
+  transition: all 0.2s ease;
+
+  display: flex;
+  flex-direction: column;
+  // justify-content: space-between;
+
+  &:hover,
+  &:focus,
+  &:active {
+    box-shadow: 3px 3px 20px rgba(50, 50, 50, 0.25);
+  }
 }
 
 .product-card_lbls {
@@ -5091,9 +5116,9 @@ p.form-free_desc {
   background-color: #ee1c25;
 }
 
-.product-card_lbl-hit,
-.product-card_lbl-new,
-.product-card_lbl-discount {
+.product-card_lbl-hit--active,
+.product-card_lbl-new--active,
+.product-card_lbl-discount--active {
   display: flex;
 }
 
@@ -5154,6 +5179,9 @@ p.form-free_desc {
 
 .product-card_price-wr {
   display: block;
+  position: absolute;
+  bottom: 18px;
+  left: 17px;
 }
 
 .product-card_price-new {
@@ -5162,7 +5190,6 @@ p.form-free_desc {
   line-height: 30px;
   color: #ee1c25;
   margin-right: 12px;
-  margin-top: 25px;
   display: none;
 }
 
@@ -5176,6 +5203,7 @@ p.form-free_desc {
   text-decoration-line: line-through;
   color: #999999;
   display: none;
+  margin-bottom: 5px;
 }
 
 .product-card_price-old--active {
@@ -5189,7 +5217,6 @@ p.form-free_desc {
   font-size: 24px;
   line-height: 30px;
   margin-right: 0;
-  margin-top: 30px;
   display: none;
 }
 
@@ -5202,8 +5229,8 @@ p.form-free_desc {
 
 .product-card_fav {
   position: absolute;
-  top: 30px;
-  right: 30px;
+  top: 17px;
+  right: 17px;
   z-index: 8;
   cursor: pointer;
   display: flex;

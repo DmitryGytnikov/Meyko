@@ -19947,12 +19947,12 @@ $(document).ready(function () {
     $('.aside').toggleClass('active');
     $('body').toggleClass('overflow');
   });
-  if ($(window).width() < 769) {
 
+  // if ($(window).width() < 834) {
     $('.footer_top_item_title').click(function () {
       $(this).closest('.footer_top_item').toggleClass('active');
     });
-  }
+  // }
 
   if ($(window).width() < 601) {
 
