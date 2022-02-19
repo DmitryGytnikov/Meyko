@@ -987,8 +987,8 @@ body {
   min-width: 0px;
   min-height: 0px; }
 
-*:focus {
-  outline: none; }
+/**:focus {
+  outline: none; }*/
 
 img {
   max-width: 100%; }
@@ -1169,9 +1169,9 @@ img {
       min-height: 20px;
       text-align: center;
       border-radius: 50%; }
-  .header_fav:hover svg path {
+  /*.header_fav:hover svg path {
     fill: #EE1C25;
-    stroke: #EE1C25; }
+    stroke: #EE1C25; }*/
 
 .btn--yellow {
   display: inline-block;
@@ -1718,8 +1718,7 @@ section {
 /* Slider */
 .slick-slider {
   position: relative;
-  display: block;
-  box-sizing: border-box;
+  /*display: block;*/
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -2000,7 +1999,7 @@ section {
     bottom: 0;
     right: 0; }
 
-@media screen and (max-width: 1365px) {
+@media (max-width: 1365px) {
   /*.header_menu {
     width: 60%; }*/
   .main-banner_wrapper {
@@ -2034,7 +2033,7 @@ section {
   .footer_top_desc_links a {
     display: block; } }
 
-@media screen and (max-width: 1300px) {
+@media (max-width: 1300px) {
   /*.header_menu_item {
     margin-right: 15px; }*/
   /*.header_menu {
@@ -2048,7 +2047,7 @@ section {
   .contacts_soc {
     text-align: left; } }
 
-@media screen and (max-width: 1199px) {
+@media (max-width: 1199px) {
   .main-wrap {
     grid-template-columns: 1fr;
     /*overflow: hidden;*/ }
@@ -2155,7 +2154,7 @@ section {
   .contacts-content {
     grid-template-columns: repeat(4, 1fr); } }
 
-@media screen and (max-width: 1024px) {
+@media (max-width: 1024px) {
   .form-free_wr {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -2183,7 +2182,7 @@ section {
     /*-webkit-box-pack: start;
             justify-content: flex-start;*/ } }
 
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
   .main-slider_item {
     padding-left: 30px;
     min-height: 310px; }
@@ -2264,7 +2263,7 @@ section {
   .main-banner {
     padding-top: 0; } }
 
-@media screen and (max-width: 600px) {
+@media (max-width: 600px) {
   .form-free_content {
     grid-template-columns: 1fr; }
   .main-title {

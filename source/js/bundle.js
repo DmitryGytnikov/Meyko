@@ -19895,7 +19895,10 @@ $(document).ready(function () {
     prevArrow: $('.main-slider_arrow.left'),
     nextArrow: $('.main-slider_arrow.right'),
     appendDots: $('.main-slider_dots'),
-    dots: true
+    dots: true,
+    fade: true,
+    autoplay: true,
+    autoplaySpeed: 4000
   });
 
   var sliders = $('.slider');
@@ -19905,34 +19908,34 @@ $(document).ready(function () {
     var rightArr = '.slider-arrow-right' + i;
     $(el).slick({
       dots: false,
-      slidesToShow: 4,
+      slidesToShow: 6,
       slidesToScroll: 1,
       arrows: true,
       margin: 20,
       prevArrow: $(leftArr),
       nextArrow: $(rightArr),
       responsive: [{
-        breakpoint: 1360,
+        breakpoint: 1919,
         settings: {
-          slidesToShow: 3
+          slidesToShow: 5
         }
       }, {
-        breakpoint: 1198,
+        breakpoint: 1610,
         settings: {
           slidesToShow: 4
         }
       }, {
-        breakpoint: 1023,
+        breakpoint: 1415,
         settings: {
           slidesToShow: 3
         }
       }, {
-        breakpoint: 768,
+        breakpoint: 835,
         settings: {
-          slidesToShow: 1
+          slidesToShow: 2
         }
       }, {
-        breakpoint: 600,
+        breakpoint: 575,
         settings: {
           slidesToShow: 1
         }

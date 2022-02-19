@@ -16,10 +16,10 @@ $(function () {
     $(this).toggleClass('accordion--active').next().slideToggle(300);
   });
 
+  // Выпадающие пункты в боковом меню
   $('.aside_menu-accordion').click(function(e) {
     $(this).toggleClass('accordion--active').next().slideToggle(300);
   });
-
 
   // Выпадающее меню сортировки на search.html
   $('.search__sort-current').click(function(e) {
@@ -41,6 +41,11 @@ $(function () {
   // Кнопка "В ИЗБРАННОЕ" на карточке товара на main.html, card.html, catalog.html
   $('.product-card_fav').click(function(e) {
     $(this).toggleClass('product-card_fav--active');
+  });
+
+  // Кнопка "В ИЗБРАННОЕ" на слйдере презентации на card.html
+  $('.big-item__fav').click(function(e) {
+    $('.big-item__fav').toggleClass('big-item__fav--active');
   });
 
   // Табы ("Характеристики") на card.html
@@ -71,5 +76,52 @@ $(function () {
   $('.input-box__tel-input').click(function(){
     $(this).setCursorPosition(3);
     }).mask("+7(999) 999-99-99",{autoclear: false});
+
+
+// Большой слайдер презентации на card.html
+  $('.presentation__slider-big').slick({
+    dots: false,
+    fade: true,
+    arrows: false,
+    asNavFor: ".presentation__slider-small",
+  });
+
+
+// Маленький слайдер презентации на card.html
+  $('.presentation__slider-small').slick({
+    dots: false,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    arrows: false,
+    asNavFor: ".presentation__slider-big",
+    // centerMode: true,
+
+    // responsive: [{
+    //   breakpoint: 1919,
+    //   settings: {
+    //     slidesToShow: 5
+    //   }
+    // }, {
+    //   breakpoint: 1610,
+    //   settings: {
+    //     slidesToShow: 4
+    //   }
+    // }, {
+    //   breakpoint: 1415,
+    //   settings: {
+    //     slidesToShow: 3
+    //   }
+    // }, {
+    //   breakpoint: 835,
+    //   settings: {
+    //     slidesToShow: 2
+    //   }
+    // }, {
+    //   breakpoint: 575,
+    //   settings: {
+    //     slidesToShow: 1
+    //   }
+    // }]
+  });
 
 });
