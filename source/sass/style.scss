@@ -6145,5 +6145,33 @@ p.info__item-address {
   opacity: 1;
 }
 
+.fancybox-content {
+  padding: 10px;
+}
+
+.popap-presentation {
+  display: none;
+}
+
+.big-item__img-presentation {
+  width: 100%;
+  height: 100%;
+}
+
+.big-item-wr {
+  position: relative;
+
+  @media (max-width: 650px) {
+    width: 500px !important;
+  }
+
+  @media (max-width: 540px) {
+    width: 400px !important;
+  }
+
+  @media (max-width: 430px) {
+    width: 300px !important;
+  }
+}
 
 // card.html^^^
