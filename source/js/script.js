@@ -33,6 +33,27 @@ $(function () {
     $('.search__sort-current').text(text_search);
   });
 
+
+
+  // Выпадающее меню сортировки на catalog-card.html
+  $('.filters__sort-current').click(function(e) {
+    e.preventDefault();
+    $(this).toggleClass('accordion--active').next().slideToggle(300);
+  });
+  $('.filters__sort-option').click(function(e) {
+    e.preventDefault();
+    $(this).closest('.filters__sort-list').slideUp(300);
+
+    var text_search = $(this).text();
+    //console.log(text_search);
+    $('.filters__sort-current').text(text_search);
+  });
+
+
+
+
+
+
   // Кнопка "В ИЗБРАННОЕ" на card.html
   $('.info__favorites').click(function(e) {
     $(this).toggleClass('info__favorites--active');
@@ -43,7 +64,7 @@ $(function () {
     $(this).toggleClass('product-card_fav--active');
   });
 
-  // Кнопка "В ИЗБРАННОЕ" на слйдере презентации на card.html
+  // Кнопка "В ИЗБРАННОЕ" на слайдере презентации на card.html
   $('.big-item__fav').click(function(e) {
     $('.big-item__fav').toggleClass('big-item__fav--active');
   });
