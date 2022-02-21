@@ -725,10 +725,7 @@ section {
   &::after {
     transition: 0.2s;
   }
-}
 
-
-.aside_menu-accordion {
   &:hover,
   &:focus,
   &:active {
@@ -741,16 +738,6 @@ section {
     }
   }
 }
-
-// .aside_menu-accordion {
-//   &:hover,
-//   &:focus,
-//   &:active {
-//     &::after {
-//       background-color: #ffd300;
-//     }
-//   }
-// }
 
 .aside_menu_bottom ul li a svg path {
   transition: 0.2s;
@@ -1865,6 +1852,10 @@ p.form-free_desc {
   bottom: 36px;
   max-width: 1436px;
   padding-right: 36px;
+
+  @include mobile {
+    justify-content: flex-end;
+  }
 }
 
 .main-slider_dots {
@@ -1872,12 +1863,6 @@ p.form-free_desc {
 
   @media (max-width: 344px) {
     top: -19px;
-  }
-}
-
-.main-slider_ctrls {
-  @include mobile {
-    justify-content: flex-end;
   }
 }
 
@@ -5158,7 +5143,6 @@ p.form-free_desc {
 }
 
 .product-card a {
-  display: block;
   width: 236px;
   min-height: 375px !important;
   padding: 0 16px 17px 16px;
@@ -5208,6 +5192,7 @@ p.form-free_desc {
 
 .product-card_lbl-new {
   background-color: #31b58d;
+  min-height: auto;
 }
 
 .product-card_lbl-discount {
@@ -5219,13 +5204,6 @@ p.form-free_desc {
 .product-card_lbl-discount--active {
   display: flex;
 }
-
-.product-card_lbl-new {
-  min-height: auto;
-}
-
-
-
 
 .product-card_img-wr {
   margin-bottom: 6px;
@@ -5271,10 +5249,6 @@ p.form-free_desc {
   margin-bottom: 0;
 }
 
-
-
-
-
 .product-card_price-wr {
   display: block;
   position: absolute;
@@ -5308,8 +5282,6 @@ p.form-free_desc {
   display: inline-block;
 }
 
-
-
 .product-card_price {
   font-weight: bold;
   font-size: 24px;
@@ -5321,9 +5293,6 @@ p.form-free_desc {
 .product-card_price--active {
   display: block;
 }
-
-
-
 
 .product-card_fav {
   position: absolute;
@@ -5373,16 +5342,34 @@ p.form-free_desc {
   font-weight: bold;
   font-size: 48px;
   line-height: 59px;
+
+  @include mobile {
+    font-size: 30px;
+    line-height: 37px;
+  }
 }
 
 .merchandise__subtitle {
   font-size: 14px;
   line-height: 17px;
   color: #c4c4c4;
+  margin-bottom: 22px;
 }
 
 .merchandise__text-wr {
   width: 345px;
+  margin-left: 15px;
+  margin-right: 15px;
+
+  @media (max-width: 1221px) {
+    margin-bottom: 30px;
+  }
+
+  @media (max-width: 430px) {
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+  }
 
   & b {
     font-weight: bold;
@@ -5400,6 +5387,18 @@ p.form-free_desc {
 .info {
   padding: 36px 31px 35px 42px;
   width: 483px;
+  background: #f9f9f9;
+  // background: red;
+  align-self: start;
+
+  @media (max-width: 897px) {
+    width: 485px;
+  }
+
+  @media (max-width: 600px) {
+    width: 100%;
+    padding: 36px 10px 35px 10px;
+  }
 
   & button {
     padding: 19px;
@@ -5454,14 +5453,20 @@ p.form-free_desc {
   align-items: center;
   margin-bottom: 30px;
   margin-top: 4px;
+  flex-wrap: wrap;
 }
 
 .info__prise {
   font-weight: bold;
   font-size: 58px;
   line-height: 58px;
-  color: #EE1C25;
+  color: #ee1c25;
   margin-right: 25px;
+
+  @media (max-width: 380px) {
+    font-size: 45px;
+    line-height: 45px;
+  }
 }
 
 .info__prise-old {
@@ -5486,6 +5491,10 @@ p.form-free_desc {
   grid-column-gap: 20px;
   grid-auto-rows: 50px;
   margin-bottom: 49px;
+
+  @media (max-width: 480px) {
+    width: 190px;
+  }
 }
 
 .color__item-label {
@@ -5501,7 +5510,7 @@ p.form-free_desc {
   }
 }
 
-.color__item-label span {
+.color__item-label span.color__item-mark {
   opacity: 0;
   transition: all 0.2s ease;
   content: "";
@@ -5512,7 +5521,7 @@ p.form-free_desc {
   height: 55px;
 }
 
-.color__item-label input[type="radio"]:checked ~ span {
+.color__item-label input[type="radio"]:checked ~ span.color__item-mark {
   content: "";
   top: -50%;
   left: 50%;
@@ -5528,7 +5537,7 @@ p.form-free_desc {
   opacity: 1;
 }
 
-.color__item-label div {
+.color__item-label .color__item-box {
   content: "";
   top: -50%;
   left: 50%;
@@ -5540,11 +5549,12 @@ p.form-free_desc {
   opacity: 0;
   transition: all 0.2s ease;
 
-  & p {
+  & span {
     opacity: 0;
     transition: all 0.2s ease;
     font-size: 12px;
     line-height: 18px;
+    font-weight: 400;
     position: absolute;
     bottom: 62px;
     left: 35%;
@@ -5559,7 +5569,7 @@ p.form-free_desc {
   }
 }
 
-.color__item-label div:hover {
+.color__item-label .color__item-box:hover {
   content: "";
   top: -50%;
   left: 50%;
@@ -5574,10 +5584,11 @@ p.form-free_desc {
   background-position: center;
   opacity: 1;
 
-  & p {
+  & span {
     display: block;
     font-size: 12px;
     line-height: 18px;
+    font-weight: 400;
     position: absolute;
     bottom: 62px;
     left: 35%;
@@ -5595,6 +5606,7 @@ p.form-free_desc {
 .info__form-inner {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .info__favorites {
@@ -5606,6 +5618,10 @@ p.form-free_desc {
   align-items: center;
   cursor: pointer;
   padding: 14px 0;
+
+  @media (max-width: 425px) {
+    margin-top: 25px;
+  }
 
   &:hover,
   &:focus,
@@ -5673,7 +5689,6 @@ p.form-free_desc {
     line-height: 22px;
   }
 
-
   & svg {
     margin-right: 23px;
     width: 46px;
@@ -5689,8 +5704,12 @@ p.info__item-address {
   border-bottom: 1px dashed #000000;
   display: inline-block;
   margin-bottom: 3px;
-}
 
+  @media (max-width: 600px) {
+    border-bottom: none;
+    margin-bottom: 16px;
+  }
+}
 
 .card__tab {
   position: relative;
@@ -5855,30 +5874,35 @@ p.info__item-address {
   color: #000000;
 }
 
-
-
-
-
 .merchandise__inner {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-}
+  margin-bottom: 117px;
 
+  @include desktop {
+    margin-bottom: 30px;
+  }
+}
 
 .presentation {
   width: 629px;
-  margin-bottom: 117px;
+  position: relative;
+  left: -5px;
+
+  @media (max-width: 1850px) {
+    margin-bottom: 50px;
+  }
+
+  @media (max-width: 650px) {
+    left: 0;
+  }
 }
 
 .presentation__slider-big {
   margin-bottom: 21px;
   min-width: 0;
 }
-
-
-
-
 
 .presentation__slider-big .slick-slide {
   display: flex;
@@ -5893,10 +5917,23 @@ p.info__item-address {
   border: 1px solid #e5e5e5;
   padding: 0;
   position: relative;
-  width: 619px !important;
-  min-height: 618px !important;
 
   filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
+
+  @media (max-width: 650px) {
+    width: 500px !important;
+    min-height: 500px !important;
+  }
+
+  @media (max-width: 540px) {
+    width: 400px !important;
+    min-height: 400px !important;
+  }
+
+  @media (max-width: 430px) {
+    width: 300px !important;
+    min-height: 300px !important;
+  }
 }
 
 .big-item__lbls {
@@ -5907,7 +5944,6 @@ p.info__item-address {
   flex-direction: column;
   align-items: start;
 }
-
 
 .big-item__lbl {
   font-weight: bold;
@@ -5985,7 +6021,6 @@ p.info__item-address {
   }
 }
 
-
 .big-item:hover,
 .big-item:focus,
 .big-item:active {
@@ -6008,18 +6043,23 @@ p.info__item-address {
   padding-left: 5px;
   padding-right: 5px;
   overflow: hidden;
+
+  @media (max-width: 650px) {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
-
-
-
 
 .presentation__slider-small {
   width: 603px;
   min-width: 0;
   position: relative;
   left: 11px;
-}
 
+  @media (max-width: 650px) {
+    display: none;
+  }
+}
 
 .presentation__slider-small .slick-slide {
   display: flex;
@@ -6035,6 +6075,10 @@ p.info__item-address {
   padding: 18px;
   width: 194px !important;
   min-height: 194px !important;
+
+  text-align: center;
+  opacity: 0.4;
+  transition: all 0.2s ease;
 }
 
 .small-item__img {
@@ -6057,18 +6101,49 @@ p.info__item-address {
   overflow: hidden;
 }
 
-.small-item {
-  text-align: center;
-  opacity: 0.4;
-  transition: all 0.2s ease;
-}
-
-// .slick-center .small-item {
-//   opacity: 1;
-// }
-
 .slick-current .small-item {
   opacity: 1;
 }
+
+.presentation__slider-big .slick-dots {
+  width: 500px;
+  bottom: -44px;
+
+  @media (max-width: 540px) {
+    width: 400px;
+  }
+
+  @media (max-width: 430px) {
+    width: 300px;
+  }
+}
+
+.presentation__slider-big .slick-dots li button::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%);
+  content: "";
+  width: 17px;
+  height: 3px;
+  font-size: 0;
+  line-height: 0px;
+  text-align: center;
+  background: #000000;
+  opacity: 1;
+  z-index: 10;
+  transition: all 0.2s ease;
+}
+
+.presentation__slider-big .slick-dots li button:hover::before {
+  background: #ffd300;
+}
+
+
+.presentation__slider-big .slick-dots li.slick-active button::before {
+  background: #ffd300;
+  opacity: 1;
+}
+
 
 // card.html^^^

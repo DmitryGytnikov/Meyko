@@ -84,6 +84,13 @@ $(function () {
     fade: true,
     arrows: false,
     asNavFor: ".presentation__slider-small",
+
+    responsive: [{
+      breakpoint: 651,
+      settings: {
+        dots: true
+      }
+    }]
   });
 
 
@@ -95,33 +102,6 @@ $(function () {
     arrows: false,
     asNavFor: ".presentation__slider-big",
     // centerMode: true,
-
-    // responsive: [{
-    //   breakpoint: 1919,
-    //   settings: {
-    //     slidesToShow: 5
-    //   }
-    // }, {
-    //   breakpoint: 1610,
-    //   settings: {
-    //     slidesToShow: 4
-    //   }
-    // }, {
-    //   breakpoint: 1415,
-    //   settings: {
-    //     slidesToShow: 3
-    //   }
-    // }, {
-    //   breakpoint: 835,
-    //   settings: {
-    //     slidesToShow: 2
-    //   }
-    // }, {
-    //   breakpoint: 575,
-    //   settings: {
-    //     slidesToShow: 1
-    //   }
-    // }]
   });
 
 });
