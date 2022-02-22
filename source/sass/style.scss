@@ -6215,12 +6215,14 @@ p.info__item-address {
   padding-left: 29px;
 }
 
-
-
-
 .filters__inner-sort {
   display: flex;
-  align-items: start;
+  align-items: center;
+  flex-wrap: wrap;
+
+  @media (max-width: 1395px) {
+    margin-bottom: 13px;
+  }
 }
 
 .filters__sort-title {
@@ -6237,6 +6239,10 @@ p.info__item-address {
   @media (max-width: 601px) {
     margin-right: 17px;
   }
+
+  @media (max-width: 371px) {
+    margin-bottom: 4px;
+  }
 }
 
 .filters__sort {
@@ -6250,6 +6256,7 @@ p.info__item-address {
     width: 223px;
     height: 45px;
     padding: 0 37px 0 20px;
+    border: 1px solid #e4e4e4;
     background: #ffffff;
     display: flex;
     align-items: center;
@@ -6278,12 +6285,12 @@ p.info__item-address {
   &::before {
     content: "";
     position: absolute;
-    right: 30px;
-    top: 50%;
-    background-image: url("../img/rect.svg");
+    right: 15px;
+    top: 44%;
+    background-image: url("../img/mark-1.svg");
     background-repeat: no-repeat;
-    width: 4px;
-    height: 4px;
+    width: 14px;
+    height: 7px;
     background-color: transparent;
     transition: all 0.2s ease;
   }
@@ -6292,7 +6299,7 @@ p.info__item-address {
 .filters__sort-current.accordion--active {
   &::before {
     transform: rotate(180deg);
-    top: 48%;
+    top: 45%;
     transform-origin: center;
     fill: var(--basic-hover);
   }
@@ -6302,11 +6309,173 @@ p.info__item-address {
   display: none;
 }
 
+.filters__parameters {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
 
+  @media (max-width: 1395px) {
+    margin-bottom: 13px;
+  }
+}
 
+.filters__parameters-title {
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 17px;
+  color: #222222;
 
+  margin-right: 16px;
+  height: 30px;
+  display: flex;
+  align-items: center;
 
+  @media (max-width: 713px) {
+    width: 100%;
+    margin-bottom: 13px;
+  }
+}
 
+.filters__price,
+.filters__availability,
+.filters__color,
+.filters__collection {
+  position: relative;
 
+  @media (max-width: 713px) {
+    margin-bottom: 13px;
+  }
+
+  & button {
+    font-weight: 800;
+    font-size: 12px;
+    line-height: 15px;
+    color: #222222;
+    width: 133px;
+    height: 30px;
+    padding: 0 29px 0 14px;
+    border: 1px solid #e4e4e4;
+    border-radius: 6px;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    z-index: 11;
+    margin-right: 11px;
+    transition: all 0.2s ease;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: var(--basic-hover);
+    }
+  }
+
+  & ul {
+    position: absolute;
+    left: 0;
+    top: 30px;
+  }
+}
+
+.filters__price,
+.filters__availability {
+  & button {
+    z-index: 12;
+  }
+}
+
+.filters__price-current,
+.filters__availability-current,
+.filters__color-current,
+.filters__collection-current {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    right: 12px;
+    top: 44%;
+    background-image: url("../img/mark-2.svg");
+    background-repeat: no-repeat;
+    width: 8px;
+    height: 4px;
+    background-color: transparent;
+    transition: all 0.2s ease;
+  }
+}
+
+.filters__price-current.accordion--active,
+.filters__availability-current.accordion--active,
+.filters__color-current.accordion--active,
+.filters__collection-current.accordion--active {
+  &::before {
+    transform: rotate(180deg);
+    top: 45%;
+    transform-origin: center;
+    fill: var(--basic-hover);
+  }
+}
+
+.filters__price-list,
+.filters__availability-list,
+.filters__color-list,
+.filters__collection-list {
+  display: none;
+}
+
+.filters__buttons {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 13px;
+
+  & li {
+    @media (max-width: 606px) {
+      margin-bottom: 13px;
+    }
+  }
+}
+
+.filters__button {
+  font-weight: 800;
+  font-size: 12px;
+  line-height: 15px;
+  color: #c4c4c4;
+  height: 29px;
+  padding: 0 27px 0 27px;
+  border: 1px solid #e4e4e4;
+  border-radius: 20px;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-right: 10px;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: #ffffff;
+    background: #ffd300;
+  }
+
+  &--active {
+    color: #ffffff;
+    background: #ffd300;
+  }
+}
+
+.filters__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.catalog-card .merchandise__title {
+  margin-bottom: 26px;
+}
 
 //catalog-card.html^^^

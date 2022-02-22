@@ -1,31 +1,24 @@
 'use strict';
 
 $(function () {
-  // $('.faq__accordion-item').click(function(e) {
-
-  //   if($('.faq-accordion').hasClass('accordion--one')) {
-  //     $('.faq__accordion-item').not($(this)).removeClass('accordion--active');
-  //     $('.faq__accordion-text').not($(this).next()).slideUp(300);
-  //   }
-
-  //   $(this).toggleClass('accordion--active').next().slideToggle(300);
-
-  // });
 
   $('.menu-accordion__item').click(function(e) {
     $(this).toggleClass('accordion--active').next().slideToggle(300);
   });
+
 
   // Выпадающие пункты в боковом меню
   $('.aside_menu-accordion').click(function(e) {
     $(this).toggleClass('accordion--active').next().slideToggle(300);
   });
 
+
   // Выпадающее меню сортировки на search.html
   $('.search__sort-current').click(function(e) {
     $(this).toggleClass('accordion--active').next().slideToggle(300);
   });
   $('.search__sort-option').click(function(e) {
+    $('.search__sort-current').removeClass('accordion--active');
     $(this).closest('.search__sort-list').slideUp(300);
 
     var text_search = $(this).text();
@@ -34,14 +27,26 @@ $(function () {
   });
 
 
-
   // Выпадающее меню сортировки на catalog-card.html
   $('.filters__sort-current').click(function(e) {
     e.preventDefault();
     $(this).toggleClass('accordion--active').next().slideToggle(300);
+
+    $('.filters__price-current').removeClass('accordion--active');
+    $('.filters__price-list').slideUp(300);
+
+    $('.filters__availability-current').removeClass('accordion--active');
+    $('.filters__availability-list').slideUp(300);
+
+    $('.filters__color-current').removeClass('accordion--active');
+    $('.filters__color-list').slideUp(300);
+
+    $('.filters__collection-current').removeClass('accordion--active');
+    $('.filters__collection-list').slideUp(300);
   });
   $('.filters__sort-option').click(function(e) {
     e.preventDefault();
+    $('.filters__sort-current').removeClass('accordion--active');
     $(this).closest('.filters__sort-list').slideUp(300);
 
     var text_search = $(this).text();
@@ -50,8 +55,127 @@ $(function () {
   });
 
 
+  // Фильтр на catalog-card.html
+  $('.filters__button').click(function(e) {
+    e.preventDefault();
+    $(this).toggleClass('filters__button--active');
+    $('.filters__button').not($(this)).removeClass('filters__button--active');
+  });
 
 
+  // Выпадающее меню "ЦЕНА" на catalog-card.html
+  $('.filters__price-current').click(function(e) {
+    e.preventDefault();
+    $(this).toggleClass('accordion--active').next().slideToggle(300);
+
+    $('.filters__availability-current').removeClass('accordion--active');
+    $('.filters__availability-list').slideUp(300);
+
+    $('.filters__color-current').removeClass('accordion--active');
+    $('.filters__color-list').slideUp(300);
+
+    $('.filters__collection-current').removeClass('accordion--active');
+    $('.filters__collection-list').slideUp(300);
+
+    $('.filters__sort-current').removeClass('accordion--active');
+    $('.filters__sort-list').slideUp(300);
+  });
+  $('.filters__price-option').click(function(e) {
+    e.preventDefault();
+    $('.filters__price-current').removeClass('accordion--active');
+    $(this).closest('.filters__price-list').slideUp(300);
+
+    var text_search = $(this).text();
+    //console.log(text_search);
+    $('.filters__price-current').text(text_search);
+  });
+
+
+  // Выпадающее меню "НАЛИЧИЕ" на catalog-card.html
+  $('.filters__availability-current').click(function(e) {
+    e.preventDefault();
+
+    $('.filters__price-current').removeClass('accordion--active');
+    $('.filters__price-list').slideUp(300);
+
+    $('.filters__color-current').removeClass('accordion--active');
+    $('.filters__color-list').slideUp(300);
+
+    $('.filters__collection-current').removeClass('accordion--active');
+    $('.filters__collection-list').slideUp(300);
+
+    $('.filters__sort-current').removeClass('accordion--active');
+    $('.filters__sort-list').slideUp(300);
+
+    $(this).toggleClass('accordion--active').next().slideToggle(300);
+  });
+  $('.filters__availability-option').click(function(e) {
+    e.preventDefault();
+    $('.filters__availability-current').removeClass('accordion--active');
+    $(this).closest('.filters__availability-list').slideUp(300);
+
+    var text_search = $(this).text();
+    //console.log(text_search);
+    $('.filters__availability-current').text(text_search);
+  });
+
+
+  // Выпадающее меню "ЦВЕТ" на catalog-card.html
+  $('.filters__color-current').click(function(e) {
+    e.preventDefault();
+
+    $('.filters__price-current').removeClass('accordion--active');
+    $('.filters__price-list').slideUp(300);
+
+    $('.filters__availability-current').removeClass('accordion--active');
+    $('.filters__availability-list').slideUp(300);
+
+    $('.filters__collection-current').removeClass('accordion--active');
+    $('.filters__collection-list').slideUp(300);
+
+    $('.filters__sort-current').removeClass('accordion--active');
+    $('.filters__sort-list').slideUp(300);
+
+    $(this).toggleClass('accordion--active').next().slideToggle(300);
+  });
+  $('.filters__color-option').click(function(e) {
+    e.preventDefault();
+    $('.filters__color-current').removeClass('accordion--active');
+    $(this).closest('.filters__color-list').slideUp(300);
+
+    var text_search = $(this).text();
+    //console.log(text_search);
+    $('.filters__color-current').text(text_search);
+  });
+
+
+  // Выпадающее меню "КОЛЛЕКЦИЯ" на catalog-card.html
+  $('.filters__collection-current').click(function(e) {
+    e.preventDefault();
+
+    $('.filters__price-current').removeClass('accordion--active');
+    $('.filters__price-list').slideUp(300);
+
+    $('.filters__availability-current').removeClass('accordion--active');
+    $('.filters__availability-list').slideUp(300);
+
+    $('.filters__color-current').removeClass('accordion--active');
+    $('.filters__color-list').slideUp(300);
+
+    $('.filters__sort-current').removeClass('accordion--active');
+    $('.filters__sort-list').slideUp(300);
+
+    $(this).toggleClass('accordion--active').next().slideToggle(300);
+  });
+  $('.filters__collection-option').click(function(e) {
+    e.preventDefault();
+    $('.filters__collection-current').removeClass('accordion--active');
+    $(this).closest('.filters__collection-list').slideUp(300);
+
+    var text_search = $(this).text();
+    //console.log(text_search);
+    $('.filters__collection-current').text(text_search);
+  });
 
 
   // Кнопка "В ИЗБРАННОЕ" на card.html
@@ -59,15 +183,18 @@ $(function () {
     $(this).toggleClass('info__favorites--active');
   });
 
+
   // Кнопка "В ИЗБРАННОЕ" на карточке товара на main.html, card.html, catalog.html
   $('.product-card_fav').click(function(e) {
     $(this).toggleClass('product-card_fav--active');
   });
 
+
   // Кнопка "В ИЗБРАННОЕ" на слайдере презентации на card.html
   $('.big-item__fav').click(function(e) {
     $('.big-item__fav').toggleClass('big-item__fav--active');
   });
+
 
   // Табы ("Характеристики") на card.html
   $('.tab-1').click(function(e) {
