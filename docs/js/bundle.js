@@ -19937,7 +19937,10 @@ $(document).ready(function () {
       }, {
         breakpoint: 575,
         settings: {
-          slidesToShow: 1
+          slidesToShow: 1,
+          centerMode: true,
+          centerPadding: '25px',
+          margin: 0,
         }
       }]
     });

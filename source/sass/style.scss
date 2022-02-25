@@ -219,9 +219,11 @@ ul {
 }
 
 .aside_menu_bottom ul .aside_menu_bottom-item-all {
-  margin-bottom: 55px;
-  margin-top: 3px;
-  display: inline-block;
+  // margin-bottom: 55px;
+  margin-bottom: 90px;
+  margin-top: -6px;
+  // display: inline-block;
+  position: relative;
 }
 
 .aside_menu_bottom {
@@ -328,7 +330,12 @@ section {
   display: inline-block;
   padding: 13px 0;
   color: #000000;
-  position: relative;
+  // position: relative;
+
+
+  position: absolute;
+  bottom: -52px;
+  left: 0;
 
   &::after {
     content: "";
@@ -383,6 +390,9 @@ section {
   padding-right: 34px;
 }
 
+.aside_menu-overflow {
+  box-shadow: 4px 0px 8px rgba(0, 0, 0, 0.031);
+}
 
 //Кастомный скрол
 /*firefox*/
@@ -644,7 +654,7 @@ section {
   }
 
   .aside_menu-overflow {
-    height: 83%;
+    height: 75%;
   }
 
 
@@ -803,7 +813,7 @@ section {
   align-items: center;
 
   & a:last-child {
-    font-size: 10.5px;
+    font-size: 14px;
     line-height: 13px;
     color: #000000;
     margin-left: auto;
@@ -824,7 +834,7 @@ section {
 }
 
 .header_menu_item {
-  font-weight: normal;
+  font-weight: bold;
   font-size: 14px;
   line-height: 17px;
   margin-right: 0;
@@ -1168,7 +1178,8 @@ section {
 
 .contacts {
   padding: 60px 0;
-  padding-bottom: 14px;
+  // padding-bottom: 14px;
+  padding-bottom: 54px;
 
   @media (max-width: 1370px) {
     padding: 36px 0 41px 0;
@@ -1876,7 +1887,7 @@ p.form-free_desc {
   font-size: 36px;
   line-height: 43px;
   // margin-bottom: 48px;
-  font-weight: 400;
+  font-weight: bold;
 
   @media (max-width: 870px) {
     // margin-bottom: 30px;
@@ -2946,7 +2957,7 @@ p.form-free_desc {
   &:focus,
   &:active {
     outline: none;
-    border: 1px solid #ee1c25;
+    border: 1px solid #ffd300;
   }
 
   &::placeholder {
@@ -2979,7 +2990,7 @@ p.form-free_desc {
   &:focus,
   &:active {
     outline: none;
-    border: 1px solid #ee1c25;
+    border: 1px solid #ffd300;
   }
 
   grid-row: 3/ span 2;
@@ -3210,11 +3221,20 @@ p.form-free_desc {
 }
 
 .contacts__address {
-  width: 292px;
+  width: 380px;
+  background: #f7f7f7;
+  padding-left: 48px;
+  padding-right: 40px;
+  position: relative;
+  right: -40px;
+  padding-top: 48px;
 
   @include desktop {
+    padding-top: 30px;
+    right: 0;
     padding-left: 48px;
     width: 543px;
+    padding-bottom: 20px;
   }
 
   @include mobile {
@@ -3670,6 +3690,10 @@ p.form-free_desc {
 
   @include mobile {
     margin-bottom: 30px;
+  }
+
+  @media (max-width: 500px) {
+    width: 100%;
   }
 
   & p:nth-child(1) {
@@ -4158,7 +4182,7 @@ p.form-free_desc {
   &:focus,
   &:active {
     outline: none;
-    border: 1px solid #ee1c25;
+    border: 1px solid #ffd300;
   }
 
   @media (max-width: 578px) {
@@ -5122,7 +5146,11 @@ p.form-free_desc {
 }
 
 .slider.slick-slider .slick-list {
-  padding-left: 20px;
+  padding-left: 9px;
+
+  @media (max-width: 575px) {
+    padding: 0;
+  }
 }
 
 .main-hits_content .slick-slide {
@@ -5918,7 +5946,7 @@ p.info__item-address {
   padding: 0;
   position: relative;
 
-  filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
+  // filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
 
   @media (max-width: 650px) {
     width: 500px !important;
@@ -6075,6 +6103,7 @@ p.info__item-address {
   padding: 18px;
   width: 194px !important;
   min-height: 194px !important;
+  cursor: pointer;
 
   text-align: center;
   opacity: 0.4;
@@ -6479,3 +6508,8 @@ p.info__item-address {
 }
 
 //catalog-card.html^^^
+
+.contacts-1 {
+  padding: 0;
+  background-color: #ffffff;
+}

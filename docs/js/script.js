@@ -181,20 +181,19 @@ $(function () {
   // Кнопка "В ИЗБРАННОЕ" на card.html
   $('.info__favorites').click(function(e) {
     $(this).toggleClass('info__favorites--active');
+    $('.big-item__fav').toggleClass('big-item__fav--active');
   });
 
+  // Кнопка "В ИЗБРАННОЕ" на слайдере презентации на card.html
+  $('.big-item__fav').click(function(e) {
+    $('.big-item__fav').toggleClass('big-item__fav--active');
+    $('.info__favorites').toggleClass('info__favorites--active');
+  });
 
   // Кнопка "В ИЗБРАННОЕ" на карточке товара на main.html, card.html, catalog.html
   $('.product-card_fav').click(function(e) {
     $(this).toggleClass('product-card_fav--active');
   });
-
-
-  // Кнопка "В ИЗБРАННОЕ" на слайдере презентации на card.html
-  $('.big-item__fav').click(function(e) {
-    $('.big-item__fav').toggleClass('big-item__fav--active');
-  });
-
 
   // Табы ("Характеристики") на card.html
   $('.tab-1').click(function(e) {
@@ -250,6 +249,9 @@ $(function () {
     arrows: false,
     asNavFor: ".presentation__slider-big",
     // centerMode: true,
+    centerMode: true,
+    centerPadding: '25px',
+    focusOnSelect: true
   });
 
 });
